@@ -1,0 +1,9 @@
+/home/ates-isf/Programming/gensim/frontend/target/debug/build/raylib-sys-1a63ed990bf631b5/out/lib/libraylib.a
+/home/ates-isf/Programming/gensim/frontend/target/debug/build/raylib-sys-1a63ed990bf631b5/out/include/raylib.h
+/home/ates-isf/Programming/gensim/frontend/target/debug/build/raylib-sys-1a63ed990bf631b5/out/include/rlgl.h
+/home/ates-isf/Programming/gensim/frontend/target/debug/build/raylib-sys-1a63ed990bf631b5/out/include/physac.h
+/home/ates-isf/Programming/gensim/frontend/target/debug/build/raylib-sys-1a63ed990bf631b5/out/include/raymath.h
+/home/ates-isf/Programming/gensim/frontend/target/debug/build/raylib-sys-1a63ed990bf631b5/out/include/raudio.h
+/home/ates-isf/Programming/gensim/frontend/target/debug/build/raylib-sys-1a63ed990bf631b5/out/lib/pkgconfig/raylib.pc
+/home/ates-isf/Programming/gensim/frontend/target/debug/build/raylib-sys-1a63ed990bf631b5/out/lib/cmake/raylib/raylib-config-version.cmake
+/home/ates-isf/Programming/gensim/frontend/target/debug/build/raylib-sys-1a63ed990bf631b5/out/lib/cmake/raylib/raylib-config.cmake

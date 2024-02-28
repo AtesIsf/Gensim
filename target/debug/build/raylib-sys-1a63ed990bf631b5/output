@@ -1,0 +1,159 @@
+CMAKE_TOOLCHAIN_FILE_x86_64-unknown-linux-gnu = None
+CMAKE_TOOLCHAIN_FILE_x86_64_unknown_linux_gnu = None
+HOST_CMAKE_TOOLCHAIN_FILE = None
+CMAKE_TOOLCHAIN_FILE = None
+CMAKE_GENERATOR_x86_64-unknown-linux-gnu = None
+CMAKE_GENERATOR_x86_64_unknown_linux_gnu = None
+HOST_CMAKE_GENERATOR = None
+CMAKE_GENERATOR = None
+running: "cc" "--version"
+exit status: 0
+running: "c++" "--version"
+exit status: 0
+CMAKE_PREFIX_PATH_x86_64-unknown-linux-gnu = None
+CMAKE_PREFIX_PATH_x86_64_unknown_linux_gnu = None
+HOST_CMAKE_PREFIX_PATH = None
+CMAKE_PREFIX_PATH = None
+CMAKE_x86_64-unknown-linux-gnu = None
+CMAKE_x86_64_unknown_linux_gnu = None
+HOST_CMAKE = None
+CMAKE = None
+running: cd "/home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/build" && CMAKE_PREFIX_PATH="" "cmake" "/home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/raylib" "-DBUILD_EXAMPLES=OFF" "-DCMAKE_BUILD_TYPE=Release" "-DSUPPORT_BUSY_WAIT_LOOP=OFF" "-DPLATFORM=Desktop" "-DCMAKE_INSTALL_PREFIX=/home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out" "-DCMAKE_C_FLAGS= -ffunction-sections -fdata-sections -fPIC -m64" "-DCMAKE_C_COMPILER=/usr/bin/cc" "-DCMAKE_CXX_FLAGS= -ffunction-sections -fdata-sections -fPIC -m64" "-DCMAKE_CXX_COMPILER=/usr/bin/c++" "-DCMAKE_ASM_FLAGS= -ffunction-sections -fdata-sections -fPIC -m64" "-DCMAKE_ASM_COMPILER=/usr/bin/cc"
+-- The C compiler identification is GNU 13.2.1
+-- The CXX compiler identification is GNU 13.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES - Success
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+-- Using raylib's GLFW
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Using X11 for window creation
+-- Found X11: /usr/include   
+-- Looking for XOpenDisplay in /usr/lib/libX11.so;/usr/lib/libXext.so
+-- Looking for XOpenDisplay in /usr/lib/libX11.so;/usr/lib/libXext.so - found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for connect
+-- Looking for connect - found
+-- Looking for remove
+-- Looking for remove - found
+-- Looking for shmat
+-- Looking for shmat - found
+-- Looking for IceConnectionNumber in ICE
+-- Looking for IceConnectionNumber in ICE - found
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_DESKTOP
+--   GRAPHICS=GRAPHICS_API_OPENGL_33
+-- Configuring done (2.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/build
+running: cd "/home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/build" && MAKEFLAGS="-j --jobserver-fds=8,9 --jobserver-auth=8,9" "cmake" "--build" "." "--target" "install" "--config" "Debug"
+[  4%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/context.c.o
+[ 12%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/input.c.o
+[ 12%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/init.c.o
+[ 16%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/monitor.c.o
+[ 20%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/vulkan.c.o
+[ 28%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/x11_init.c.o
+[ 28%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/window.c.o
+[ 32%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/x11_monitor.c.o
+[ 36%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/x11_window.c.o
+[ 40%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/xkb_unicode.c.o
+[ 44%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/posix_time.c.o
+[ 48%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/posix_thread.c.o
+[ 52%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/glx_context.c.o
+[ 56%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/egl_context.c.o
+[ 60%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/osmesa_context.c.o
+[ 64%] Building C object raylib/external/glfw/src/CMakeFiles/glfw_objlib.dir/linux_joystick.c.o
+[ 64%] Built target glfw_objlib
+[ 68%] Linking C static library libglfw3.a
+[ 68%] Built target glfw
+[ 72%] Building C object raylib/CMakeFiles/raylib.dir/models.c.o
+[ 76%] Building C object raylib/CMakeFiles/raylib.dir/core.c.o
+[ 80%] Building C object raylib/CMakeFiles/raylib.dir/shapes.c.o
+[ 84%] Building C object raylib/CMakeFiles/raylib.dir/text.c.o
+[ 92%] Building C object raylib/CMakeFiles/raylib.dir/raudio.c.o
+[ 92%] Building C object raylib/CMakeFiles/raylib.dir/utils.c.o
+[ 96%] Building C object raylib/CMakeFiles/raylib.dir/textures.c.o
+[100%] Linking C static library libraylib.a
+[100%] Built target raylib
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/lib/libraylib.a
+-- Installing: /home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/include/raylib.h
+-- Installing: /home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/include/rlgl.h
+-- Installing: /home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/include/physac.h
+-- Installing: /home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/include/raymath.h
+-- Installing: /home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/include/raudio.h
+-- Installing: /home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/lib/pkgconfig/raylib.pc
+-- Installing: /home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/lib/cmake/raylib/raylib-config-version.cmake
+-- Installing: /home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/lib/cmake/raylib/raylib-config.cmake
+cargo:root=/home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out
+cargo:rustc-link-search=native=/home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/lib
+cargo:rustc-link-search=/usr/local/lib
+cargo:rustc-link-lib=X11
+cargo:rustc-link-lib=static=raylib
+TARGET = Some("x86_64-unknown-linux-gnu")
+OPT_LEVEL = Some("0")
+HOST = Some("x86_64-unknown-linux-gnu")
+cargo:rerun-if-env-changed=CC_x86_64-unknown-linux-gnu
+CC_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=CC_x86_64_unknown_linux_gnu
+CC_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+running: "cc" "--version"
+exit status: 0
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+DEBUG = Some("true")
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+cargo:rerun-if-env-changed=CFLAGS_x86_64-unknown-linux-gnu
+CFLAGS_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_unknown_linux_gnu
+CFLAGS_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-4" "-fno-omit-frame-pointer" "-m64" "-I" "." "-o" "/home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/d1fba762150c532c-rgui_wrapper.o" "-c" "rgui_wrapper.c"
+exit status: 0
+cargo:rerun-if-env-changed=AR_x86_64-unknown-linux-gnu
+AR_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=AR_x86_64_unknown_linux_gnu
+AR_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64-unknown-linux-gnu
+ARFLAGS_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64_unknown_linux_gnu
+ARFLAGS_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+running: ZERO_AR_DATE="1" "ar" "cq" "/home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/librgui.a" "/home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/d1fba762150c532c-rgui_wrapper.o"
+exit status: 0
+running: "ar" "s" "/home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out/librgui.a"
+exit status: 0
+cargo:rustc-link-lib=static=rgui
+cargo:rustc-link-search=native=/home/ates-isf/Programming/gensim/target/debug/build/raylib-sys-1a63ed990bf631b5/out

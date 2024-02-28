@@ -1,0 +1,13 @@
+prefix=/home/ates-isf/Programming/gensim/frontend/target/debug/build/raylib-sys-1a63ed990bf631b5/out
+exec_prefix=${prefix}
+includedir=/home/ates-isf/Programming/gensim/frontend/target/debug/build/raylib-sys-1a63ed990bf631b5/out/include
+libdir=/home/ates-isf/Programming/gensim/frontend/target/debug/build/raylib-sys-1a63ed990bf631b5/out/lib
+
+Name: GLFW
+Description: A multi-platform library for OpenGL, window and input
+Version: 3.4.0
+URL: https://www.glfw.org/
+Requires.private:  x11
+Libs: -L${libdir} -lglfw3
+Libs.private:  -lrt -lm -ldl
+Cflags: -I${includedir}

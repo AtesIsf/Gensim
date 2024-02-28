@@ -1,0 +1,10 @@
+[workspace]
+
+members = [
+	"./backend/genalgo",
+	"./backend/nnet",
+	"./frontend",
+]
+
+workspace.resolver = "2"
+
