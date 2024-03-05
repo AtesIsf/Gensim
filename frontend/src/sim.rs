@@ -12,6 +12,7 @@ const N_FOOD: usize = 240;
 
 pub struct Sim {
     food: Arc<Mutex<Vec<Food>>>,
+    centers: Vec<(f32, f32)>,
     pub rl: RaylibHandle,
     rt: RaylibThread,
     border: Rectangle,
@@ -23,9 +24,19 @@ pub struct Sim {
 
 impl Sim {
     pub fn init() -> Self {
+        let mut centers = Vec::with_capacity(N_FOOD / 20);
+        let mut rng = rand::thread_rng();
+
+        for _ in 0..N_FOOD/20 {
+            centers.push((rng.gen_range(100.0..880.0), rng.gen_range(100.0..540.0)));
+        }
+
         let mut food = Vec::with_capacity(N_FOOD);
-        for _ in 0..N_FOOD {
-            food.push(Food::new());
+        for i in 0..N_FOOD {
+            food.push(Food::new(
+                centers[i%centers.len()].0,
+                centers[i%centers.len()].1,
+            ));
         }
 
         let mut pops = Vec::with_capacity(N_POP);
@@ -42,7 +53,10 @@ impl Sim {
         let border = Rectangle {x: 60.0, y: 60.0, width: 860.0, height: 520.0};
         let ptr = Arc::new(Mutex::new(food));
 
-        Sim { food: ptr, rl, rt, border, gen_counter: 1, is_paused: true, best_fitness: 0.0, algo: GenAlgo::<Blob>::new(pops) }
+        Sim { 
+            food: ptr, centers, rl, rt, border, gen_counter: 1, is_paused: true, best_fitness: 0.0, 
+            algo: GenAlgo::<Blob>::new(pops) 
+        }
     }
 
     pub fn draw(&mut self) {
@@ -59,7 +73,6 @@ impl Sim {
         }
     }
 
-    // Probably terribly written
     pub fn update(&mut self) {
         self.handle_inputs();
 
@@ -134,9 +147,22 @@ impl Sim {
         self.algo.evolve();
 
         self.food.lock().unwrap().clear();
-        for _ in 0..N_FOOD {
-            self.food.lock().unwrap().push(Food::new());
+
+        let mut rng = rand::thread_rng();
+
+        self.centers.clear();
+        for _ in 0..N_FOOD/20 {
+            self.centers.push((rng.gen_range(100.0..880.0), rng.gen_range(100.0..540.0)));
         }
+
+        for i in 0..N_FOOD {
+            self.food.lock().unwrap().push(
+                Food::new(
+                    self.centers[i%self.centers.len()].0,
+                    self.centers[i%self.centers.len()].1,
+                ));
+        }
+
     }
 
     fn save_state(&self) {
@@ -190,9 +216,9 @@ pub struct Food {
 }
 
 impl Food {
-    fn new() -> Self {
+    fn new(x: f32, y: f32) -> Self {
         let mut rng = rand::thread_rng();
-        Food { pos: Vector2 { x: rng.gen_range(80.0..900.0), y: rng.gen_range(80.0..560.0) }, eaten: false }
+        Food { pos: Vector2 { x: x + rng.gen_range(-20.0..20.0), y: y + rng.gen_range(-20.0..20.0) }, eaten: false }
     }
 
     fn draw(&self, d: &mut RaylibDrawHandle) {
