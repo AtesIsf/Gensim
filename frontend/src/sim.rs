@@ -8,7 +8,7 @@ use raylib::prelude::*;
 use crate::blob::*;
 
 const N_POP: usize = 80; 
-const N_FOOD: usize = 120; 
+const N_FOOD: usize = 240; 
 
 pub struct Sim {
     food: Arc<Mutex<Vec<Food>>>,
