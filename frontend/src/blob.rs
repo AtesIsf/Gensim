@@ -6,7 +6,7 @@ use raylib::prelude::*;
 use crate::sim::Food;
 
 const NETWORK_TEMPLATE: [u32; 4] = [12, 4, 4, 2];
-const START_ENERGY: f32 = 60.0;
+const START_ENERGY: f32 = 100.0;
 
 pub struct Blob {
     pub pos: Vector2,
@@ -44,7 +44,7 @@ impl Pop for Blob {
     }
 
     fn fitness_fn(&self) -> f32 {
-        f32::max(self.n_eaten as f32, 0.1) * self.total_lifetime/START_ENERGY
+        f32::max(self.n_eaten as f32, f32::EPSILON) * self.total_lifetime/START_ENERGY
     }
 
     fn from_strand(strand: &[f32]) -> Self {
@@ -129,7 +129,9 @@ impl Blob {
         self.pos.x += v_res[0]; 
         self.pos.y += v_res[1]; 
 
-        self.energy -= 1.0; 
+        let mag = f32::sqrt(f32::powi(v_res[0], 2) + f32::powi(v_res[1], 2));
+
+        self.energy -= 5.0/mag; 
         
         let temp = ptr.lock().unwrap().clone();
         counter = 0;
