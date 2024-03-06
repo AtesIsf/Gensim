@@ -78,7 +78,7 @@ impl Blob {
         }
 
         // Food sensors + distance to the borders
-        let mut data: Vec<f32> = vec![f32::MAX; self.sensors.len() + 4];
+        let mut data: Vec<f32> = vec![1000.0; self.sensors.len() + 4];
 
         let mut counter = 0;
         let mut min_distance = f32::MAX;
